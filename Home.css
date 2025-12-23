@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5faff;
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    background: #0b78a6;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 12px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    background: white;
+    color: #0b78a6;
+    border-radius: 6px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 5%;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    color: #0b78a6;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background: #0b78a6;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #095c80;
+}
+
+.hero-img img {
+    width: 280px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #0b78a6;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    width: 28%;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+.box img {
+    width: 80px;
+}
+
+/* Footer */
+footer {
+    background: #0b78a6;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-img {
+        width: 100%;
+    }
+
+    .service-boxes {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
