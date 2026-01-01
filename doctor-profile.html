@@ -110,7 +110,6 @@
 
 <div class="container">
 
-    <!-- Doctor Profile Section -->
     <div class="profile-box">
         <img id="doctorImage" src="" alt="Doctor">
 
@@ -122,7 +121,7 @@
         </div>
     </div>
 
-    <!-- Doctor Schedule Section -->
+    
     <div class="schedule-box">
         <h3>Weekly Schedule</h3>
 
@@ -142,7 +141,7 @@
 </div>
 
 <script>
-    // Example doctor details (you can link this with doctor-list page)
+    
     const doctor = {
         name: "Dr. John Silva",
         specialty: "Cardiologist",
@@ -159,13 +158,12 @@
         ]
     };
 
-    // Display doctor details
+    
     document.getElementById("doctorName").innerText = doctor.name;
     document.getElementById("doctorSpecialty").innerText = doctor.specialty;
     document.getElementById("doctorExperience").innerText = doctor.experience;
     document.getElementById("doctorImage").src = doctor.image;
 
-    // Load schedule into table
     const scheduleBody = document.getElementById("scheduleBody");
 
     doctor.schedule.forEach(s => {
