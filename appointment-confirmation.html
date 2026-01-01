@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCare | Appointment Confirmation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+body{
+    background:#f0faff;
+}
+header{
+    background:#0b78a6;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:22px;
+    font-weight:bold;
+}
+.container{
+    width:90%;
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.12);
+}
+h2{
+    color:#0b78a6;
+    text-align:center;
+    margin-bottom:20px;
+}
+.details p{
+    margin:10px 0;
+    font-size:16px;
+}
+.success{
+    color:green;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:20px;
+}
+a{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    text-decoration:none;
+    background:#0b78a6;
+    color:white;
+    padding:12px;
+    border-radius:6px;
+}
+a:hover{
+    background:#095c80;
+}
+</style>
+</head>
+
+<body>
+
+<header>MediCare | Appointment Confirmation</header>
+
+<div class="container">
+    <h2>Appointment Confirmed</h2>
+    <p class="success">✅ Your appointment has been successfully booked!</p>
+
+    <div class="details">
+        <p><strong>Patient Name:</strong> <span id="pName"></span></p>
+        <p><strong>Email:</strong> <span id="pEmail"></span></p>
+        <p><strong>Doctor:</strong> <span id="pDoctor"></span></p>
+        <p><strong>Date:</strong> <span id="pDate"></span></p>
+        <p><strong>Time:</strong> <span id="pTime"></span></p>
+    </div>
+
+    <a href="home.html">Go to Home</a>
+</div>
+
+<script>
+document.getElementById("pName").innerText = localStorage.getItem("patientName");
+document.getElementById("pEmail").innerText = localStorage.getItem("email");
+document.getElementById("pDoctor").innerText = localStorage.getItem("doctor");
+document.getElementById("pDate").innerText = localStorage.getItem("date");
+document.getElementById("pTime").innerText = localStorage.getItem("time");
+</script>
+
+</body>
+</html>
