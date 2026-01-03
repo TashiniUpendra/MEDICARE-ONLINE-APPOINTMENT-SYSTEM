@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediCare | Appointment History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background:#f0faff;
+        }
+
+        header{
+            background:#0b78a6;
+            color:white;
+            padding:18px;
+            text-align:center;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:40px auto;
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 4px 18px rgba(0,0,0,0.12);
+        }
+
+        h2{
+            color:#0b78a6;
+            margin-bottom:20px;
+            text-align:center;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            padding:12px;
+            text-align:center;
+            border-bottom:1px solid #d9e9f2;
+        }
+
+        th{
+            background:#0b78a6;
+            color:white;
+        }
+
+        tr:hover{
+            background:#f2fbff;
+        }
+
+        .status{
+            padding:6px 10px;
+            border-radius:6px;
+            color:white;
+            font-size:14px;
+        }
+
+        .completed{
+            background:#28a745;
+        }
+
+        .pending{
+            background:#ffc107;
+            color:#000;
+        }
+
+        .cancelled{
+            background:#dc3545;
+        }
+    </style>
+</head>
+<body>
+
+<header>MediCare | Appointment History</header>
+
+<div class="container">
+    <h2>Your Appointments</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Specialty</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="historyTable">
+            <!-- JS loads data -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Sample appointment history data
+    const appointments = [
+        {
+            doctor: "Dr. John Silva",
+            specialty: "Cardiologist",
+            date: "2025-01-10",
+            time: "10:30 AM",
+            status: "Completed"
+        },
+        {
+            doctor: "Dr. Maya Fernando",
+            specialty: "Dermatologist",
+            date: "2025-01-18",
+            time: "2:00 PM",
+            status: "Pending"
+        },
+        {
+            doctor: "Dr. Ruwan Perera",
+            specialty: "Neurologist",
+            date: "2024-12-22",
+            time: "11:00 AM",
+            status: "Cancelled"
+        }
+    ];
+
+    const table = document.getElementById("historyTable");
+
+    appointments.forEach(a => {
+        const row = document.createElement("tr");
+
+        let statusClass = "";
+        if(a.status === "Completed") statusClass = "completed";
+        if(a.status === "Pending") statusClass = "pending";
+        if(a.status === "Cancelled") statusClass = "cancelled";
+
+        row.innerHTML = `
+            <td>${a.doctor}</td>
+            <td>${a.specialty}</td>
+            <td>${a.date}</td>
+            <td>${a.time}</td>
+            <td><span class="status ${statusClass}">${a.status}</span></td>
+        `;
+
+        table.appendChild(row);
+    });
+</script>
+
+</body>
+</html>
