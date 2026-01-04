@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediCare | Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #eaf6fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0b78a6;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #b7dbea;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #0b78a6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #095c80;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Admin Login</h2>
+
+    <form id="adminLoginForm">
+        <label>Admin Email</label>
+        <input type="email" id="adminEmail" required>
+
+        <label>Password</label>
+        <input type="password" id="adminPassword" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="note">Authorized administrators only</p>
+</div>
+
+<script>
+    document.getElementById("adminLoginForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const email = document.getElementById("adminEmail").value;
+        const password = document.getElementById("adminPassword").value;
+
+        // Simple demo validation
+        if(email === "admin@medicare.com" && password === "admin123") {
+            alert("Login successful!");
+            window.location.href = "admin-dashboard.html";
+        } else {
+            alert("Invalid admin credentials!");
+        }
+    });
+</script>
+
+</body>
+</html>
