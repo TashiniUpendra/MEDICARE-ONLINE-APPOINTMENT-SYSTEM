@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediCare | View Appointments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f4f9fc;
+        }
+
+        header {
+            background: #0b78a6;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        header button {
+            background: white;
+            color: #0b78a6;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        header button:hover {
+            background: #e6f4fb;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .table-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .table-box h2 {
+            color: #0b78a6;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #e6f4fb;
+        }
+
+        .status {
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: white;
+            font-size: 13px;
+        }
+
+        .pending {
+            background: #f39c12;
+        }
+
+        .confirmed {
+            background: #27ae60;
+        }
+
+        .cancelled {
+            background: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>View Appointments</h1>
+    <button onclick="goBack()">Back</button>
+</header>
+
+<div class="container">
+
+    <div class="table-box">
+        <h2>Appointment List</h2>
+
+        <table>
+            <tr>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Nimal Perera</td>
+                <td>Dr. Silva (Cardiology)</td>
+                <td>2026-01-12</td>
+                <td>10:30 AM</td>
+                <td><span class="status pending">Pending</span></td>
+            </tr>
+
+            <tr>
+                <td>Kamal Fernando</td>
+                <td>Dr. Fernando (Dermatology)</td>
+                <td>2026-01-12</td>
+                <td>11:15 AM</td>
+                <td><span class="status confirmed">Confirmed</span></td>
+            </tr>
+
+            <tr>
+                <td>Saman Jayasinghe</td>
+                <td>Dr. Perera (Orthopedic)</td>
+                <td>2026-01-13</td>
+                <td>09:45 AM</td>
+                <td><span class="status cancelled">Cancelled</span></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    function goBack() {
+        window.location.href = "admin-dashboard.html";
+    }
+</script>
+
+</body>
+</html>
