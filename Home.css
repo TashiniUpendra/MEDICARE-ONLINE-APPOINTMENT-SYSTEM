@@ -10,7 +10,7 @@ body {
     color: #222;
 }
 
-/* Navbar */
+
 .navbar {
     background: #0b78a6;
     padding: 15px 5%;
@@ -45,7 +45,7 @@ body {
     border-radius: 6px;
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     justify-content: center;
@@ -121,7 +121,7 @@ body {
     width: 80px;
 }
 
-/* Footer */
+
 footer {
     background: #0b78a6;
     color: white;
