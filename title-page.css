@@ -1,4 +1,4 @@
-/* Title page styles — suitable for screen and printing */
+
 :root{
   --accent:#0b78a6;   /* blue-ish */
   --muted:#6b6b6b;
@@ -109,7 +109,6 @@ html,body{
   font-weight:600;
 }
 
-/* Footer note */
 .footer-note{
   margin-top:20px;
   color:var(--muted);
